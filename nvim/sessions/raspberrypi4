@@ -1,0 +1,191 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Coding/kernel_programming/raspberrypi/custom_drivers
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 ~/Coding/java/ChildInherits.java
+badd +12 test/test.c
+badd +268 ~/linux_kernel_source/linux-5.11.3/include/linux/device/class.h
+badd +31 ~/linux_kernel_source/linux-5.11.3/include/linux/err.h
+badd +651 ~/linux_kernel_source/linux-5.11.3/fs/char_dev.c
+badd +3864 ~/linux_kernel_source/linux-5.11.3/drivers/base/core.c
+badd +23 ~/linux_kernel_source/linux-5.11.3/include/linux/cdev.h
+badd +361 ~/linux_kernel_source/linux-5.11.3/include/linux/module.h
+badd +1 001hello_world/main.c
+badd +1 ~/Coding/kernel_programming/raspberrypi/programs/hellokernel.c
+badd +1 ~/Coding/kernel_programming/raspberrypi/test.c
+badd +4 test/Makefile
+badd +13 001hello_world/Makefile
+badd +1 002pseudo_char_driver/test.c
+badd +1 ~/vimwiki/diary/2021-02-11.wiki
+badd +140 002pseudo_char_driver/pcd.c
+badd +35 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/cdev.h
+badd +685 ~/Software/linux-5.8.12/fs/char_dev.c
+badd +17 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/export.h
+badd +357 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/module.h
+badd +9 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//59772:/bin/zsh
+badd +4 001hello_world/makefile
+badd +5 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//60018:/bin/zsh
+badd +24 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//681:/bin/zsh
+badd +172 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//1452:/bin/zsh
+badd +15 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//4162:/bin/zsh
+badd +12 ~/Coding/kernel_programming/raspberrypi/source/linux/include/linux/module.h
+badd +5 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//4886:/bin/zsh
+badd +5 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//5008:/bin/zsh
+badd +27 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//5495:/bin/zsh
+badd +32 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//7707:/bin/zsh
+badd +31 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world//8986:/bin/zsh
+badd +91 002pseudo_char_driver/main.c
+badd +1839 /usr/lib/modules/5.10.7-arch1-1/build/include/linux/fs.h
+badd +850 /usr/lib/modules/5.10.7-arch1-1/build/include/linux/device.h
+badd +37 /usr/lib/modules/5.10.7-arch1-1/build/include/linux/pm.h
+badd +373 /usr/lib/modules/5.10.7-arch1-1/build/include/linux/printk.h
+badd +1 002pseudo_char_driver/Makefile
+badd +1 002pseudo_char_driver/pcd.o
+badd +7 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver//1104:/bin/zsh
+badd +372 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/printk.h
+badd +916 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/fs.h
+badd +1 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/quota.h
+badd +1 ~/Software/linux-5.8.12/fs/jffs2/fs.c
+badd +178 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/types.h
+badd +48 /usr/lib/modules/5.10.11-arch1-1/build/include/uapi/linux/fs.h
+badd +1 003pseudo_char_driver_multiple_devices/pcd.c
+badd +1 003pseudo_char_driver_multiple_devices/pcd.c\ pcd_multi.c
+badd +261 003pseudo_char_driver_multiple_devices/pcd_multi.c
+badd +1 003pseudo_char_driver_multiple_devices/Makefile
+badd +21 /usr/lib/modules/5.10.11-arch1-1/build/include/uapi/asm-generic/fcntl.h
+badd +255 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/device/class.h
+badd +851 /usr/lib/modules/5.10.11-arch1-1/build/include/linux/kernel.h
+badd +1 004_pcd_platform_driver/pcd_device_setup.c
+badd +6 004_pcd_platform_driver/platform.h
+badd +17 004_pcd_platform_driver/pcd_platform_driver.c
+badd +1 004_pcd_platform_driver/Makefile
+badd +27 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver//11779:/bin/zsh
+badd +2 test.c
+badd +1 /usr/lib/modules/5.10.15-arch1-1/build/include/linux/cdev.h
+badd +373 /usr/lib/modules/5.10.15-arch1-1/build/include/linux/printk.h
+badd +22 /usr/lib/modules/5.10.15-arch1-1/build/include/uapi/asm-generic/fcntl.h
+badd +1 /usr/lib/modules/5.10.15-arch1-1/build/include/linux/device.h
+badd +856 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/device.h
+badd +1820 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/fs.h
+badd +17 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/export.h
+badd +273 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/device/class.h
+badd +34 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/err.h
+badd +37 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices//871:/bin/zsh
+badd +17 /usr/lib/modules/5.11.1-arch1-1/build/include/linux/cdev.h
+badd +1 dev_read.c
+badd +1 application/dev_read.c
+badd +91 application/dev_read_original.c
+badd +360 /usr/include/unistd.h
+badd +8 /usr/lib/modules/5.11.2-arch1-1/build/include/linux/kernel.h
+badd +1 /usr/include/linux/stddef.h
+badd +18 /usr/lib/modules/5.11.2-arch1-1/build/include/linux/cdev.h
+badd +1818 /usr/lib/modules/5.11.2-arch1-1/build/include/linux/fs.h
+badd +365 /usr/lib/modules/5.11.2-arch1-1/build/include/linux/module.h
+badd +178 /usr/lib/modules/5.11.2-arch1-1/build/include/linux/types.h
+badd +692 ~/linux_kernel_source/linux-5.11.3/include/linux/kernel.h
+badd +5 ~/linux_kernel_source/linux-5.11.3/include/uapi/asm-generic/errno-base.h
+badd +241 ~/linux_kernel_source/linux-5.11.3/include/linux/uaccess.h
+badd +1828 ~/linux_kernel_source/linux-5.11.3/include/linux/fs.h
+badd +1 ~/linux_kernel_source/linux-5.11.3/include/linux/kdev_t.h
+badd +1 ~/linux_kernel_source/linux-5.11.3/include/linux/kobject.h
+badd +87 ~/linux_kernel_source/linux-5.11.3/include/linux/device.h
+badd +111 ~/linux_kernel_source/linux-5.11.3/include/linux/cred.h
+badd +240 ~/linux_kernel_source/linux-5.11.3/include/linux/swap.h
+badd +64 ~/linux_kernel_source/linux-5.11.3/include/linux/compiler_attributes.h
+badd +50 ~/linux_kernel_source/linux-5.11.3/include/linux/init.h
+badd +372 ~/linux_kernel_source/linux-5.11.3/include/linux/printk.h
+badd +48 ~/linux_kernel_source/linux-5.11.3/fs/super.c
+badd +121 ~/linux_kernel_source/linux-5.11.3/kernel/module.c
+badd +44 ~/linux_kernel_source/linux-5.11.3/include/linux/uio.h
+badd +55 ~/linux_kernel_source/linux-5.11.3/include/linux/types.h
+badd +526 ~/linux_kernel_source/linux-5.11.3/arch/x86/include/asm/pgtable_types.h
+badd +97 ~/linux_kernel_source/linux-5.11.3/include/linux/dcache.h
+badd +18 ~/linux_kernel_source/linux-5.11.3/include/linux/klist.h
+badd +21 ~/linux_kernel_source/linux-5.11.3/include/asm-generic/int-ll64.h
+badd +27 ~/linux_kernel_source/linux-5.11.3/include/uapi/asm-generic/int-ll64.h
+badd +76 ~/linux_kernel_source/linux-5.11.3/arch/x86/include/asm/alternative.h
+badd +65 ~/linux_kernel_source/linux-5.11.3/include/linux/dynamic_debug.h
+badd +84 ~/linux_kernel_source/linux-5.11.3/include/linux/sysfs.h
+badd +261 ~/linux_kernel_source/linux-5.11.3/drivers/base/class.c
+badd +117 ~/linux_kernel_source/linux-5.11.3/scripts/mod/modpost.h
+badd +43 ~/linux_kernel_source/linux-5.11.3/include/uapi/linux/fs.h
+badd +187 ~/linux_kernel_source/linux-5.11.3/include/linux/lockdep_types.h
+badd +23 ~/linux_kernel_source/linux-5.11.3/include/linux/moduleparam.h
+badd +21 ~/linux_kernel_source/linux-5.11.3/include/linux/compiler-clang.h
+badd +50 ~/linux_kernel_source/linux-5.11.3/include/linux/compiler_types.h
+badd +396 ~/linux_kernel_source/linux-5.11.3/drivers/scsi/qla2xxx/qla_def.h
+badd +72 ~/linux_kernel_source/linux-5.11.3/include/uapi/asm-generic/posix_types.h
+badd +53 ~/linux_kernel_source/linux-5.11.3/include/linux/mutex.h
+badd +11 ~/linux_kernel_source/linux-5.11.3/include/linux/errno.h
+badd +426 ~/linux_kernel_source/linux-5.11.3/include/linux/string.h
+badd +18 ~/linux_kernel_source/linux-5.11.3/arch/x86/include/asm/string_64.h
+badd +33 ~/linux_kernel_source/linux-5.11.3/include/linux/list.h
+badd +372 ~/linux_kernel_source/linux-5.11.3/lib/kobject.c
+badd +59 ~/linux_kernel_source/linux-5.11.3/include/linux/llist.h
+badd +27 ~/linux_kernel_source/linux-5.11.3/include/linux/posix_acl.h
+badd +819 ~/linux_kernel_source/linux-5.11.3/drivers/base/platform.c
+badd +23 ~/linux_kernel_source/linux-5.11.3/include/linux/platform_device.h
+badd +586 ~/linux_kernel_source/linux-5.11.3/include/linux/mod_devicetable.h
+badd +13 ~/scripts/autostart.sh
+badd +89 ~/linux_kernel_source/linux-5.11.3/drivers/base/base.h
+badd +97 ~/linux_kernel_source/linux-5.11.3/include/linux/device/driver.h
+badd +82 ~/linux_kernel_source/linux-5.11.3/include/linux/device/bus.h
+badd +27 ~/linux_kernel_source/linux-5.11.3/include/uapi/linux/types.h
+badd +122 ~/linux_kernel_source/linux-5.11.3/drivers/crypto/ccp/ccp-dev-v5.c
+badd +8 ~/linux_kernel_source/linux-5.11.3/include/linux/path.h
+badd +83 ~/linux_kernel_source/linux-5.11.3/include/linux/spinlock_types.h
+badd +19 ~/linux_kernel_source/linux-5.11.3/include/linux/export.h
+badd +32 ~/linux_kernel_source/linux-5.11.3/drivers/base/map.c
+badd +5 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/test//20043:/bin/zsh
+badd +4 ~/Coding/CProgramming/udemy/003Convert_Minutes_to_years_and_days.c
+badd +7 ~/.config/nvim/coc-settings.json
+badd +236 ~/linux_kernel_source/linux-5.11.3/fs/read_write.c
+badd +0 test/Makefile
+argglobal
+%argdel
+edit 003pseudo_char_driver_multiple_devices/pcd_multi.c
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+balt ~/linux_kernel_source/linux-5.11.3/include/linux/export.h
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 235 - ((13 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 235
+normal! 08|
+lcd ~/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcI
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

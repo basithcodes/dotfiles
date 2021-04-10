@@ -1,0 +1,52 @@
+{
+	"clangd.arguments":[
+		"-log=verbose",
+		"-pretty", 
+		"--background-index"
+	],
+	"clangd.enabled": true,
+	"clangd.disableSnippetCompletion": false,
+	"clangd.semanticHighlighting": true,
+	"clangd.path": "/usr/bin/clangd",
+	"clangd.disableCompletion": false,
+
+	"java.format.settings.url": "/home/basith/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+	"java.project.resourceFilters": [
+		"node_modules",
+		".git"
+	],
+	"codeLens.enable": true,
+	"java.referencesCodeLens.enabled": true,
+	"java.implementationsCodeLens.enabled": true,
+	"java.configuration.updateBuildConfiguration": "automatic",
+
+	"suggest.noselect":false,
+
+	"suggest.completionItemKindLabels": {
+		"method": "  ",
+		"function": "  ",
+		"variable": "[]",
+		"field": "  ",
+		"typeParameter": "<>",
+		"constant": "  ",
+		"class": " פּ ",
+		"interface": " 蘒",
+		"struct": "  ",
+		"event": "  ",
+		"operator": "  ",
+		"module": "  ",
+		"property": "  ",
+		"enum": " 練",
+		"reference": "  ",
+		"keyword": "  ",
+		"file": "  ",
+		"folder": " ﱮ ",
+		"color": "  ",
+		"unit": " 塞 ",
+		"snippet": "  ",
+		"text": "  ",
+		"constructor": "  ",
+		"value": "  ",
+		"enumMember": "  "
+	}
+}

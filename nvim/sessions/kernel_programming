@@ -1,0 +1,89 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +15 Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.c
+badd +1 Coding/kernel_programming/raspberrypi/programs/hellokernel.c
+badd +23 Coding/kernel_programming/app/char.c
+badd +1 Coding/kernel_programming/driver/mychar.
+badd +1 Coding/kernel_programming/driver/mychar.c
+badd +1 Coding/kernel_programming/app/readAndWrite.c
+badd +1 Coding/kernel_programming/driver/simplechar.c
+badd +2 term://.//22636:/bin/zsh
+badd +9 term://.//15101:/bin/zsh
+badd +11 term://.//620:/bin/zsh
+badd +102 term://.//4352:/bin/zsh
+badd +20 term://.//605:/bin/zsh
+badd +29 term://.//23119:/bin/zsh
+badd +1 term://.//56024:/bin/zsh
+badd +82 Coding/CProgramming/headFirstC/017SPIES.c
+badd +16 Coding/CProgramming/headFirstC/test.c
+badd +1 Coding/kernel_programming/raspberrypi/test.c
+badd +1 Coding/kernel_programming/raspberrypi/custom_drivers/test/test.c
+badd +1 Coding/kernel_programming/raspberrypi/custom_drivers/test/Makefile
+badd +1 Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.mod.c
+badd +1 term://~/Coding/kernel_programming/raspberrypi/custom_drivers/test//1942:/bin/zsh
+badd +1 linux_kernel_source/linux-5.11.3/include/linux/module.h
+badd +24 linux_kernel_source/linux-5.11.3/include/linux/moduleparam.h
+badd +27 Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/pcd.c
+badd +9 Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/file.txt
+badd +1 Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/Makefile
+badd +23 linux_kernel_source/linux-5.11.3/include/linux/cdev.h
+badd +651 linux_kernel_source/linux-5.11.3/fs/char_dev.c
+badd +1 Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/Makefile
+badd +373 linux_kernel_source/linux-5.11.3/include/linux/printk.h
+badd +2140 linux_kernel_source/linux-5.11.3/kernel/printk/printk.c
+badd +15 linux_kernel_source/linux-5.11.3/include/linux/kern_levels.h
+badd +50 linux_kernel_source/linux-5.11.3/include/linux/init.h
+badd +257 linux_kernel_source/linux-5.11.3/include/linux/compiler_attributes.h
+badd +0 linux_kernel_source/linux-5.11.3/include/linux/module.h
+badd +15 Coding/CProgramming/udemy/012ticTacToe.c
+argglobal
+%argdel
+edit Coding/CProgramming/udemy/012ticTacToe.c
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+balt Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.c
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 16 - ((12 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 16
+normal! 0
+lcd ~/Coding/CProgramming/udemy
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcI
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

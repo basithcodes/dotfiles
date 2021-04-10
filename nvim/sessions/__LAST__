@@ -1,0 +1,161 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Coding/CProgramming/udemy
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +2 ~/vimwiki/index.wiki
+badd +5 ~/vimwiki/tech/index.wiki
+badd +7 ~/Coding/CProgramming/cInDepth/7_Recursion/tailRecursive.c
+badd +1 ~/Coding/CProgramming/cInDepth/7_Recursion/solved_prob4.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/test.c
+badd +15 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.2.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.9.c
+badd +10 ~/vimwiki/tech/programming/c/index.wiki
+badd +1 ~/vimwiki/tech/programming/c/Storage\ Classes.wiki
+badd +1 ~/vimwiki/tech/programming/c/External\ Storage\ Class.wiki
+badd +11 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.11.c
+badd +20 ~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.c
+badd +13 ~/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/Makefile
+badd +6 ~/Coding/CProgramming/test.c
+badd +59 ~/Coding/microcontroller_programming/atmega328p/002povToy/1up.c
+badd +7 ~/Coding/CProgramming/vivenEmbeddedAcademy/arraySimple.c
+badd +1 ~/vimwiki/tech/programming/c/9_Pointers/Pointers.wiki
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/pointerBasic1.c
+badd +30 ~/Coding/CProgramming/vivenEmbeddedAcademy/pointerBasic2.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/factPointer.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/sumOfNaturalNumPointer.c
+badd +43 ~/Coding/CProgramming/vivenEmbeddedAcademy/peopleNamesPointer.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/strCmp.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/test.c
+badd +25 term://~/Coding/CProgramming/vivenEmbeddedAcademy//5856:/bin/zsh
+badd +14 ~/Coding/CProgramming/vivenEmbeddedAcademy/myreverseString.c
+badd +1 ~/vimwiki/InterviewPrep.wiki
+badd +479 ~/resumegroff.ms
+badd +21 term://~//950:/bin/zsh
+badd +11 ~/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/test.c
+badd +10 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.1.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/a.out
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.3.c
+badd +22 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.10.c
+badd +25 ~/Coding/CProgramming/vivenEmbeddedAcademy/memorySegments1.c
+badd +12 ~/Coding/CProgramming/vivenEmbeddedAcademy/ncurses.c
+badd +1 /usr/include/stdio.h
+badd +1 ~/Coding/CProgramming/cInDepth/src/myfun.c
+badd +1 ~/Coding/CProgramming/cInDepth/inc/myfun.h
+badd +7 ~/Coding/CProgramming/cInDepth/test.c
+badd +1 ~/.config/nvim/UltiSnips/c.snippets
+badd +1 ~/Coding/mydefine.h
+badd +82 ~/.zshrc
+badd +1 007guessTheNumber.c
+badd +453 /usr/include/stdlib.h
+badd +75 /usr/include/time.h
+badd +1 ~/Coding/CProgramming/NERD_tree_1
+badd +5 term://~/Coding/CProgramming//6628:/bin/zsh
+badd +2 term://~/Coding/CProgramming//6671:/bin/zsh
+badd +8 ~/Coding/CProgramming/headFirstC/006categorize.c
+badd +14 ~/Coding/CProgramming/vivenEmbeddedAcademy/stringCopyFunExample.c
+badd +1 010WeatherReport.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/011functions.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/input.txt
+badd +35 ~/Coding/CProgramming/vivenEmbeddedAcademy/formulas.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/001areaOfCircle.c
+badd +8 ~/Coding/CProgramming/vivenEmbeddedAcademy/002aPlusbSquaredFormula.c
+badd +6 ~/Coding/CProgramming/vivenEmbeddedAcademy/003speedFormula.c
+badd +8 ~/Coding/CProgramming/vivenEmbeddedAcademy/004areaOfTriangle.c
+badd +10 ~/Coding/CProgramming/vivenEmbeddedAcademy/005permeterOfCircle.c
+badd +7 ~/Coding/CProgramming/vivenEmbeddedAcademy/006areaOfRectangle.c
+badd +5 ~/Coding/CProgramming/vivenEmbeddedAcademy/007perimeterOfRectangle.c
+badd +12 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/007perimeterOfRectangle.c
+badd +8 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/test.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/008incrementAndDecrement1.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/009incrementAndDecrement2.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/010logicalOperators1.c
+badd +19 009PrimeNumbersArray.c
+badd +31 011functions1.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/011conditionalOperators.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/012assignmentOperator.c
+badd +19 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/013typeCastOperator.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/014sizeofOperator.c
+badd +8 ~/.config/st/config.h
+badd +12 012ticTacToe.c
+badd +1 term://~/Coding/CProgramming/udemy//56674:/bin/zsh
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/013arithmeticOperationsOrder.c
+badd +9 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/015arithmeticOperationsOrder.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/015bodmasRblca.c
+badd +27 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/016ifElse.c
+badd +1 /usr/include/stdio_ext.h
+badd +1 cInDepth/8_Arrays/test.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/013string.c
+badd +1 013string.c
+badd +140 /usr/include/string.h
+badd +55 014searchingTokenizingAnalyzingString.c
+badd +1 015convertingStrings.c
+badd +9 016convertingStrings2.c
+badd +52 ~/.config/nvim/init.vim
+badd +1 ~/.config/nvim/UltiSnips/016convertingStrings2.c
+badd +1 ~/.config/coc/ultisnips/c.snippets
+badd +121 ~/.config/nvim/plugged/vim-snippets/snippets/c.snippets
+badd +2 ~/.config/nvim/plugged/vim-snippets/UltiSnips/c.snippets
+badd +1 ~/.config/nvim/plugged/vim-snippets/snippets/snippets.snippets
+badd +1 017stringlen.c
+badd +1 ~/Coding/CProgramming/cInDepth/8_Arrays/017stringlen.c
+badd +23 018stringCat.c
+badd +5 019stringCmp.c
+badd +7 020reverseString.c
+badd +4 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/test/00test.c
+badd +61 021bubbleSort.c
+badd +1 test.c
+badd +27 bubblesort2.c
+badd +1 022bubbleSortString.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/017patterntriangles1.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/pattern.h
+badd +386 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/pattern.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/pattern1.c
+badd +1 ~/Coding/CProgramming/vivenEmbeddedAcademy/vivenNew/018goto.c
+argglobal
+%argdel
+$argadd ~/Coding/CProgramming/test.c
+edit 022bubbleSortString.c
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 08|
+lcd ~/Coding/CProgramming/udemy
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=aoO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

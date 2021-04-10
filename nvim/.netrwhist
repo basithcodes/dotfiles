@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/basith/Coding/CProgramming/vivenEmbeddedAcademy'
+let g:netrw_dirhist_8='/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver'
+let g:netrw_dirhist_7='/home/basith/Coding/CProgramming/cInDepth/6_Functions'
+let g:netrw_dirhist_6='/home/basith/Coding/CProgramming/cInDepth'
+let g:netrw_dirhist_5='/home/basith/Coding/CProgramming/cInDepth/7_Recursion'
+let g:netrw_dirhist_4='/home/basith/scripts'
+let g:netrw_dirhist_3='/home/basith/Coding/CProgramming/cInDepth/7_Recursion'
+let g:netrw_dirhist_2='/home/basith/Coding/kernel_programming/raspberrypi/source/linux'
+let g:netrw_dirhist_1='/home/basith/.config/dwmblocks'
+let g:netrw_dirhist_0='/home/basith/.ssh'

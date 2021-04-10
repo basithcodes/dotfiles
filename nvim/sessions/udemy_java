@@ -1,0 +1,130 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Coding/java/java_udemy/Projects
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +8 ~/.config/nvim/plug-config/rooter.vim
+badd +1 term://~/Coding/java/java_udemy/Projects/Challenges/DecimalComaprator/src//43158:\'fzf\'\ --history\ \'/home/basith/.local/share/fzf-history/files\'\ \'--color=bg+:\#141414,bg:\#040404,spinner:\#DAE84D,hl:\#61507A,fg:\#DFDBDF,header:\#61507A,info:\#DAE84D,pointer:\#B53B50,marker:\#EA5CE2,fg+:\#DFDBDF,prompt:\#EA5CE2,hl+:\#B53B50\'\ \'-m\'\ \'--prompt\'\ \'~/C/j/j/P/C/D/src/\'\ \'--layout=reverse\'\ \'--inline-info\'\ \'--preview\'\ \'\'/\'\'/home/basith/.config/nvim/plugged/fzf.vim/bin/preview.sh\'/\'\'\ \{}\'\ \'--bind\'\ \'ctrl-/:toggle-preview\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvim7mByyC/4;\#FZF
+badd +2 term://~/Coding/java/java_udemy//9404:\'fzf\'\ --history\ \'/home/basith/.local/share/fzf-history/files\'\ \'--color=bg+:\#141414,bg:\#040404,spinner:\#DAE84D,hl:\#61507A,fg:\#DFDBDF,header:\#61507A,info:\#DAE84D,pointer:\#B53B50,marker:\#EA5CE2,fg+:\#DFDBDF,prompt:\#EA5CE2,hl+:\#B53B50\'\ \'-m\'\ \'--prompt\'\ \'~/C/j/java_udemy/\'\ \'--layout=reverse\'\ \'--inline-info\'\ \'--preview\'\ \'\'/\'\'/home/basith/.config/nvim/plugged/fzf.vim/bin/preview.sh\'/\'\'\ \{}\'\ \'--bind\'\ \'ctrl-/:toggle-preview\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvimpOyW79/2;\#FZF
+badd +11 StatementsWhitespacesIndentation/src/Main.java
+badd +1 term://~/Coding/java/java_udemy//8806:\'fzf\'\ --history\ \'/home/basith/.local/share/fzf-history/files\'\ \'--color=bg+:\#141414,bg:\#040404,spinner:\#DAE84D,hl:\#61507A,fg:\#DFDBDF,header:\#61507A,info:\#DAE84D,pointer:\#B53B50,marker:\#EA5CE2,fg+:\#DFDBDF,prompt:\#EA5CE2,hl+:\#B53B50\'\ \'-m\'\ \'--prompt\'\ \'../../../\'\ \'--layout=reverse\'\ \'--inline-info\'\ \'--preview\'\ \'\'/\'\'/home/basith/.config/nvim/plugged/fzf.vim/bin/preview.sh\'/\'\'\ \{}\'\ \'--bind\'\ \'ctrl-/:toggle-preview\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvim8VjByZ/11;\#FZF
+badd +2 HelloWorld/src/Hello.java
+badd +6 ByteShortintLong/src/ByteShortintLong.java
+badd +134 jdt://contents/java.base/java.lang/String.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(String.class
+badd +76 jdt://contents/java.base/java.lang/Integer.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Integer.class
+badd +1 src/academy/learnprogramming/academy/learnprogramming/Main.class
+badd +98 jdt://contents/java.base/java.lang/System.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +98 jdt://contents/java.base/java.lang/System.class\?=learnprogramming_e4ca8623/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +65 jdt://contents/java.base/java.lang/Long.class\?=learnprogramming_e4ca8623/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Long.class
+badd +2 term://~/Coding/java/java_udemy/projects/ByteShortintLong/src/academy/learnprogramming//14927:/bin/zsh
+badd +76 jdt://contents/java.base/java.lang/Integer.class\?=learnprogramming_e4ca8623/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Integer.class
+badd +23 src/academy/learnprogramming/academy/learnprogramming/Main.java
+badd +1 ByteShortintLong/src/Main.java
+badd +9 ByteShortintLong/src/Primitive.java
+badd +7 FloatAndDouble/Main.java
+badd +1 FloatAndDouble/src/Primitive.java
+badd +4 FloatAndDouble/src/PoundsTokgs.java
+badd +10 CharAndBoolean/src/Main.java
+badd +1 Strings/src/Main.java
+badd +1 Operators/src/Operators.java
+badd +15 Operators/src/Challange.java
+badd +146 jdt://contents/java.base/java.lang/System.class\?=src_e22458cc/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +1 Strings/src/Main.class
+badd +1 CharAndBoolean/src/Main.class
+badd +1 ~/Coding/java/owaisClass/MotherInterface.java
+badd +5 KeywordAndExpressions/src/Main.java
+badd +1 ControlStatements/src/Main.java
+badd +30 ~/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml
+badd +36 ControlStatements/src/Challenge.java
+badd +2 term://~/Coding/java/java_udemy/projects/ControlStatements/src//17335:/bin/zsh
+badd +5 SpeedConverter/src/Main.java
+badd +1 SpeedConverter/src/SpeedConverter.java
+badd +742 jdt://contents/java.base/java.lang/Math.class\?=projects_34a9a0d7/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Math.class
+badd +6 ChallengesSection4/src/MegaBytesConverter.java
+badd +1 ChallengesSection4/MegaBytesConverter/src/MegaBytesConverter.java
+badd +3 ChallengesSection4/MegaBytesConverter/src/Main.java
+badd +1 ChallengesSection4/BarkingDog/src/BarkingDog.java
+badd +3 ChallengesSection4/BarkingDog/src/Main.java
+badd +1 Challenges/Section4/BarkingDog/src/Main.java
+badd +1 Challenges/Section4/BarkingDog/src/BarkingDog.java
+badd +58 ~/.config/nvim/plugged/vim-snippets/UltiSnips/java.snippets
+badd +1 Challenges/DecimalComaprator/src/DecimalComparator.java
+badd +1 ~/Coding/java/java_udemy/NERD_tree_1
+badd +1 Challenges/BarkingDog/src/Main.java
+badd +3 term://~/Coding/java/java_udemy/Projects//13109:/bin/zsh
+badd +7 term://~/Coding/java/java_udemy/Projects//14557:/bin/zsh
+badd +1 term://~/Coding/java/java_udemy/Projects//14688:/bin/zsh
+badd +2 term://~/Coding/java/java_udemy/Projects//14713:/bin/zsh
+badd +1 Challenges/LeapYear/src/Main.java
+badd +1 src/Main.java
+badd +1 LeapYear/src/Main.java
+badd +1 term://~/Coding/java/java_udemy/Projects//18379:/bin/zsh
+badd +1 Challenges/LeapYear/out/LeapYear.class
+badd +1 Challenges/LeapYear/src/LeapYear.java
+badd +1 Challenges/BarkingDog/src/BarkingDog.java
+badd +1 Challenges/DecimalComaprator/src/Main.java
+badd +3 ~/Coding/java/owaisClass/Child.java
+badd +1 Challenges/EqualSumChecker/src/EqualSumChecker.java
+badd +5 Challenges/EqualSumChecker/src/Main.java
+badd +2 Challenges/TeenNumberChecker/src/TeenNumberChecker.java
+badd +3 Challenges/TeenNumberChecker/src/Main.java
+badd +1 MethodOverloading/src/Main.java
+badd +14 NERD_tree_1
+badd +9 SecondsAndMinutes/src/SecondsAndMinutes.java
+badd +3 SecondsAndMinutes/src/Main.java
+badd +1026 jdt://contents/java.base/java.io/PrintStream.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.io(PrintStream.class
+badd +1026 jdt://contents/java.base/java.io/PrintStream.class\?=src_58c3e384/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.io(PrintStream.class
+badd +146 jdt://contents/java.base/java.lang/System.class\?=src_58c3e384/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +134 jdt://contents/java.base/java.lang/String.class\?=src_58c3e384/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(String.class
+badd +0 SecondsAndMinutes/src/Main.java
+badd +1 ~/Coding/java/owaisClass/com/olivetech/practice/MotherInterface.class
+badd +3 ~/Coding/java/owaisClass/MethodHiding.java
+badd +0 ~/Coding/java/owaisClass/MethodOveriding.java
+argglobal
+%argdel
+edit ~/Coding/java/owaisClass/MethodOveriding.java
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+balt ~/Coding/java/owaisClass/MethodHiding.java
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd ~/Coding/java/owaisClass
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=aoO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

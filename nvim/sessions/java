@@ -1,0 +1,158 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Coding/java/owaisClass
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 term://~/Coding/java/java_udemy/Projects/Challenges//4573:\'fzf\'\ --history\ \'/home/basith/.local/share/fzf-history/files\'\ \'--color=bg+:\#141414,bg:\#040404,spinner:\#DAE84D,hl:\#61507A,fg:\#DFDBDF,header:\#61507A,info:\#DAE84D,pointer:\#B53B50,marker:\#EA5CE2,fg+:\#DFDBDF,prompt:\#EA5CE2,hl+:\#B53B50\'\ \'-m\'\ \'--prompt\'\ \'~/C/j/j/P/Challenges/\'\ \'--layout=reverse\'\ \'--inline-info\'\ \'--preview\'\ \'\'/\'\'/home/basith/.config/nvim/plugged/fzf.vim/bin/preview.sh\'/\'\'\ \{}\'\ \'--bind\'\ \'ctrl-/:toggle-preview\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvimaxXHBx/6;\#FZF
+badd +1 Coding/java/java_udemy/projects/HelloWorld/src/Hello.java
+badd +1 ~/Coding/java/EmployeeCollection.java
+badd +1 ~/Coding/java/ChildInherits.java
+badd +2 ~/Coding/java/MotherInterface.java
+badd +2 ~/Coding/java/FatherInterface.java
+badd +38 ~/Coding/CProgramming/cInDepth/8_Arrays/p8.12.c
+badd +5 ~/Coding/java/first.java
+badd +6 ~/Coding/java/Hello.java
+badd +7 ~/Coding/java/Hello.class
+badd +98 jdt://contents/java.base/java.lang/System.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +1026 jdt://contents/java.base/java.io/PrintStream.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.io(PrintStream.class
+badd +1 ~/Coding/java/Matrix.java
+badd +14 ~/Coding/java/MethodOverload.java
+badd +182 jdt://contents/java.base/java.io/InputStream.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.io(InputStream.class
+badd +14 ~/Coding/java/MethodOverload2.java
+badd +4 ~/Coding/java/MethodOveriding.java
+badd +5 ~/Coding/java/MethodOveriding2.java
+badd +27 ~/Coding/java/Parent.java
+badd +32 ~/Coding/java/Child
+badd +1 ~/Coding/java/Child.java
+badd +1 ~/Coding/java/MethodHiding.java
+badd +1 ~/Coding/java/MyInterface.java
+badd +3 ~/Coding/java/MyInterfaceImplementation.java
+badd +3 ~/Coding/java/MyInterfaceImplimentationRunner.java
+badd +1 ~/Coding/java/finalKeywordConcept.java
+badd +1 ~/Coding/java/FinalKeywordConcept.java
+badd +1 ~/Coding/java/coc-settings.json
+badd +21 term://~/Coding/java//78843:/bin/zsh
+badd +48 term://~/Coding/java//21672:/bin/zsh
+badd +1 ~/Coding/java/CollegeData.java
+badd +5 ~/Coding/java/CollegeDataGet.java
+badd +3 term://~/Coding/java//315252:/bin/zsh
+badd +67 jdt://contents/java.base/java.lang/Object.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Object.class
+badd +5 ~/Coding/java/packageCreationMain.java
+badd +1 jdt://contents/java.base/java.util/Formatter.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Formatter.class
+badd +6 term://~/Coding/java//1039:/bin/zsh
+badd +1 ~/Coding/java/java_udemy/FirstProgram.java
+badd +10 term://~/Coding/java/java_udemy//9714:/bin/zsh
+badd +1 Coding/java/java_udemy/projects/HelloWorld.java
+badd +1 Coding/java/java_udemy/projects/HelloWorld/HelloWorld.java
+badd +1 Coding/java/java_udemy/projects/HelloWorld/src/HelloWorld.java
+badd +1026 jdt://contents/java.base/java.io/PrintStream.class\?=src_3551f58d/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.io(PrintStream.class
+badd +146 jdt://contents/java.base/java.lang/System.class\?=src_3551f58d/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +131 jdt://contents/java.base/java.lang/String.class\?=src_3551f58d/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(String.class
+badd +2 ~/Coding/java/list.java
+badd +14 ~/Coding/java/Storage.java
+badd +64 jdt://contents/java.base/java.lang/Integer.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Integer.class
+badd +55 jdt://contents/java.base/java.lang/Number.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Number.class
+badd +134 jdt://contents/java.base/java.lang/String.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(String.class
+badd +168 jdt://contents/java.base/java.util/ArrayList.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(ArrayList.class
+badd +180 jdt://contents/java.base/java.util/List.class\?=java_bd01f2a2/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(List.class
+badd +6 ~/Coding/java/MotherFatherImplementation.java
+badd +1 ~/LinkedListCollection.java
+badd +6 term://~/Coding/java/owaisClass/ArraysAndCollection//23941:/bin/zsh
+badd +1 ~/Customer.java
+badd +8 term://~/Coding/java/owaisClass/ArraysAndCollection//27051:/bin/zsh
+badd +2 term://~/Coding/java/owaisClass/ArraysAndCollection//27328:/bin/zsh
+badd +67 jdt://contents/java.base/java.lang/Object.class\?=ArraysAndCollection_67a2e96e/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Object.class
+badd +7 term://~/Coding/java/owaisClass/ArraysAndCollection//27495:/bin/zsh
+badd +140 jdt://contents/java.base/java.util/List.class\?=ArraysAndCollection_67a2e96e/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(List.class
+badd +310 jdt://contents/java.base/java.util/Scanner.class\?=ArraysAndCollection_67a2e96e/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Scanner.class
+badd +159 jdt://contents/java.base/java.util/Map.class\?=ArraysAndCollection_67a2e96e/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Map.class
+badd +253 jdt://contents/java.base/java.util/Collection.class\?=ArraysAndCollection_67a2e96e/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Collection.class
+badd +1 Collections/LinkedListCollection.class
+badd +1 Collections/LinkedListCollection.java
+badd +83 jdt://contents/java.base/java.util/LinkedList.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(LinkedList.class
+badd +58 jdt://contents/java.base/java.util/Iterator.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Iterator.class
+badd +140 jdt://contents/java.base/java.util/List.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(List.class
+badd +253 jdt://contents/java.base/java.util/Collection.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Collection.class
+badd +42 jdt://contents/java.base/java.lang/Iterable.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(Iterable.class
+badd +134 jdt://contents/java.base/java.lang/String.class\?=jdt.ls-java-project/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(String.class
+badd +26 Collections/Customer.java
+badd +58 jdt://contents/java.base/java.util/Iterator.class\?=Collections_87fee948/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.util(Iterator.class
+badd +1 ~/.config/nvim/UltiSnips/java.snippets
+badd +1 ~/.config/coc/ultisnips/java.snippets
+badd +6 ~/.config/nvim/plugged/vim-snippets/UltiSnips/snippets.snippets
+badd +1 MegaBytesConverter/src/MegaBytesConverter.java
+badd +1 BarkingDog/out/Main.class
+badd +1 BarkingDog/src/BarkingDog.java
+badd +1 BarkingDog/src/Main.java
+badd +1 Section4/BarkingDog/src/BarkingDog.java
+badd +1 ~/Coding/java/java_udemy/Projects/Challenges/BarkingDog/src/BarkingDog.java
+badd +6 ~/Coding/java/java_udemy/Projects/Challenges/BarkingDog/src/Main.java
+badd +7 ~/Coding/java/java_udemy/Projects/Challenges/LeapYear/src/LeapYear.java
+badd +161 ~/.config/nvim/plugged/vim-snippets/UltiSnips/java.snippets
+badd +3 ~/Coding/java/java_udemy/Projects/Challenges/LeapYear/Main.java
+badd +10 ~/Coding/java/java_udemy/Projects/Challenges/LeapYear/src/Main.java
+badd +1 ../DecimalComparator/src/DecimalComparator.java
+badd +3 ~/Coding/java/java_udemy/Projects/Challenges/DecimalComaprator/src/DecimalComparator.java
+badd +1 Collections/ListIterator/src/ListIterator.java
+badd +1 Child.java
+badd +19 MethodOverload.java
+badd +1 Collections/Child.java
+badd +1 ~/Coding/java/java_udemy/Projects/SecondsAndMinutes/src/SecondsAndMinutes.java
+badd +5 ~/Coding/java/java_udemy/Projects/SecondsAndMinutes/src/Main.java
+badd +146 jdt://contents/java.base/java.lang/System.class\?=src_58c3e384/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-15-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base=/javadoc_location=/https:\%5C/\%5C/docs.oracle.com\%5C/en\%5C/java\%5C/javase\%5C/15\%5C/docs\%5C/api\%5C/=/\%3Cjava.lang(System.class
+badd +1 ~/Coding/java/java_udemy/Projects/SecondsAndMinutes/src/SecondsAndMinutes.class
+badd +1 MethodHiding.java
+badd +8 MotherFatherImplementation.java
+badd +63 jdt://contents/java.base/java.io/PrintStream.class\?=Projects_388404f7/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-16-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base\%3Cjava.io(PrintStream.class
+badd +133 jdt://contents/java.base/java.lang/String.class\?=Projects_388404f7/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-16-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base\%3Cjava.lang(String.class
+badd +98 jdt://contents/java.base/java.lang/System.class\?=Projects_388404f7/\%5C/usr\%5C/lib\%5C/jvm\%5C/java-16-jdk\%5C/lib\%5C/jrt-fs.jar\%60java.base\%3Cjava.lang(System.class
+badd +1 ~/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml
+badd +4 Collections/test.java
+badd +0 Collections/LinkedListCollection.java
+argglobal
+%argdel
+edit Collections/test.java
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 5 - ((4 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 5
+normal! 039|
+lcd ~/Coding/java/owaisClass/Collections
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=aoO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
