@@ -1,0 +1,20 @@
+sw_volume: 48
+audio_device_state:1:pulse audio
+audio_device_state:1:Visualizer feed
+state: pause
+current: 4
+time: 9808.181000
+random: 0
+repeat: 1
+single: 1
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Bruno Mars - Locked Out Of Heaven (Official Music Video)-e-fA-gBCkj0.m4a
+1:Night at Work _ Instrumental Chill Music Mix-n9Y2Eb4BaSg.opus
+2:Chillstep Music for Programming _ Cyber _ Coding-M5QY2_8704o.opus
+3:Ergo Proxy OP [HD]-oAXrRWLKzko.opus
+4:Programming ▫️ Designing ▫️ Coding ▫️ Music 📈-dDI8jLlc5WE.opus
+playlist_end
