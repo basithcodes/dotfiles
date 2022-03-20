@@ -1,4 +1,5 @@
 = Dot Files =
 1. nvim
+
 2. kitty
 
