@@ -1,0 +1,390 @@
+require ('telescope').load_extension "file_browser"
+require('telescope').setup{
+
+	defaults = {
+		vimgrep_arguments = {
+			'rg',
+			'--no-heading',
+			'--with-filename',
+			'--line-number',
+			'--column',
+			'--smart-case'
+		},
+		prompt_prefix = "$ ",
+		selection_caret = "> ",
+		entry_prefix = "  ",
+		initial_mode = "insert",
+		selection_strategy = "reset",
+		sorting_strategy = "descending",
+		layout_strategy = "horizontal",
+		layout_config = {
+			horizontal = {
+				mirror = false,
+				prompt_position = "bottom",
+				--preview_cutoff = 10000
+			},
+			vertical = {
+				mirror = false,
+				--preview_cutoff = 10000
+			},
+		},
+		--file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+		--file_sorter = require('telescope.sorters').get_fzy_sorter,
+		file_ignore_patterns = {},
+		--generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+		winblend = 0,
+		border = {},
+		borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+		color_devicons = true,
+		use_less = true,
+		path_display = {},
+		set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
+		file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+		grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+		qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+
+		-- Extensions
+		extensions = {
+			fzf = {
+				fuzzy = true,                    -- false will only do exact matching
+				override_generic_sorter = true,  -- override the generic sorter
+				override_file_sorter = true,     -- override the file sorter
+				case_mode = "ignore_case",        -- or "ignore_case" or "respect_case"
+				-- the default case_mode is "smart_case"
+			}
+		},
+
+		-- Developer configurations: Not meant for general override
+		buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+	}
+}
+
+
+--require('telescope').load_extension('fzy_native')
+-- require('telescope').load_extension('fzf')
+
+
+-- Project and File Navigation function
+local M = {}
+
+-- Find files in current directory
+M.curr_dir_files = function()
+	require('telescope.builtin').find_files({
+		prompt_title = " < Current Directoy Files > ",
+		shorten_path = false,
+		width = .25,
+		layout_strategy = 'horizontal',
+		layout_config = {
+			preview_width = 0.65,
+		},
+	})
+end
+
+-- Current directory file browser
+M.curr_dir_file_browser = function()
+	require('telescope.load_extension').file_browser({
+		prompt_title = " < Current Directoy Browser > ",
+		shorten_path = false,
+		width = .25,
+		layout_strategy = 'horizontal',
+		layout_config = {
+			preview_width = 0.65,
+		},
+	})
+
+end
+
+-- Grep words in current file
+M.grep_in_file_buf = function()
+	--local opt = require('telescope.themes').get_dropdown({
+		--layout_strategy = "bottom_pane",
+		--layout_config = {
+			--height = 30,
+		--},
+		--border = true,
+	--}
+	--)
+	--require('telescope.builtin').current_buffer_fuzzy_find(opt)
+	require('telescope.builtin').current_buffer_fuzzy_find({
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+	})
+end
+
+-- Grep words in current directory recursively
+M.live_grep_in_dir= function()
+	--local opt = require('telescope.themes').get_dropdown({
+		--layout_strategy = "bottom_pane",
+		--width = 0.25,
+		--layout_config = {
+			--preview_width = 0.65,
+		--},
+		--border = true,
+	--}	)
+	--require('telescope.builtin').live_grep(opt)
+	require('telescope.builtin').live_grep({
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+	})
+end
+
+-- Search files in c directory
+M.search_c_directory = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< All C Program Files >",
+		cwd = "~/Coding/CProgramming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d",
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Find kernel programming files
+M.search_mykernel_directory = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< Raspberry Pi Kernel Program Files >",
+		cwd = "~/Coding/kernel_programming/raspberrypi",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"^docs",
+			"^patches",
+			"^resource_help_udemy",
+			"^downloads",
+			"^source",
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d",
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Browse files in nvim lua directory
+M.nvim_config_lua = function()
+	require('telescope.builtin').find_files({
+		prompt_title = "< NVIM lua files >",
+		cwd = "~/.config/nvim/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new
+	})
+end
+
+-- Grep in c directory
+M.live_grep_in_c_dir= function ()
+	require("telescope.builtin").live_grep({
+		prompt_title = "< Live Grep In C Program Directory >",
+		cwd = "~/Coding/CProgramming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
+		},
+		grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+	})
+end
+
+-- Files in buffers
+M.buffers = function ()
+	require("telescope.builtin").buffers({
+		prompt_title = "< Buffer Files >",
+		grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+	})
+end
+
+-- Vim help function
+M.help_tags_vim = function()
+	require('telescope.builtin').help_tags({
+		prompt_title = '< Vim help tags >',
+		grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+	})
+end
+
+-- Find files in stm32 workspace
+M.search_stm32_proj = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< All stm32 program files >",
+		cwd = "/home/basith/Coding/microcontroller_programming/stm32/stm32f407vgt6/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Find files in stm32 workspace
+M.search_sstm32_proj = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< Stm32 IDE Programming Files >",
+		cwd = "/home/basith/STM32CubeIDE/workspace_1.8.0/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- File browser for system programming directory
+M.search_sstm32_proj_browser = function ()
+	require("telescope.builtin").file_browser({
+		prompt_title = "< Stm32 IDE Programming Files Browser >",
+		cwd = "/home/basith/STM32CubeIDE/workspace_1.8.0/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.o",
+			"^old/",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Find files in system programming directory
+M.system_prog = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< All system programming files >",
+		cwd = "~/Coding/system_programming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.o",
+			"^old/",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- File browser for system programming directory
+M.system_prog_browser = function ()
+	require("telescope.builtin").file_browser({
+		prompt_title = "< System Programming Files Browser >",
+		cwd = "~/Coding/system_programming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.o",
+			"^old/",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- File browser for python programming directory
+M.python_prog = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< All python programming files >",
+		cwd = "~/Coding/python_programming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+M.python_prog_browser = function ()
+	require("telescope").file_browser({
+		prompt_title = "< Python Programming Files Browser >",
+		cwd = "~/Coding/python_programming/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+M.printing = function()
+	local workspace = vim.inspect(vim.lsp.buf.list_workspace_folders())
+	if workspace ~= '{}' or workspace == nil then
+		local total_length = string.len(workspace)
+		local char_cut = string.sub(workspace,4,total_length-3)
+		--print(char_cut)
+		--TODO
+		--@ get actual project name
+
+		require("telescope.builtin").find_files({
+			prompt_title = "< " .. char_cut .. " >",
+			file_ignore_patterns = {
+				"^docs/",
+				"%.jpg",
+				"%.zip",
+				"%.o",
+				"%.out",
+				"%.d"
+			},
+			cwd = char_cut,
+			grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new
+		})
+	end
+end
+return M
