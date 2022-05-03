@@ -36,6 +36,10 @@ return require('packer').startup(function()
 		'saadparwaiz1/cmp_luasnip'
 	}
 
+	use {"p00f/clangd_extensions.nvim"}
+
+	use {"ThePrimeagen/harpoon"}
+
 	use { "nvim-telescope/telescope-file-browser.nvim" }
 
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -79,7 +83,7 @@ return require('packer').startup(function()
 
 	use 'norcalli/nvim-colorizer.lua'
 
-	--use 'nvim-lua/lsp-status.nvim'
+	use 'nvim-lua/lsp-status.nvim'
 
-	--use 'chriskempson/base16-vim'
+	use 'chriskempson/base16-vim'
 end)

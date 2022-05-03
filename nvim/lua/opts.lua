@@ -52,9 +52,5 @@ vim.cmd([[
 colorscheme moonfly
 " colorscheme morning
 " colorscheme material
- " highlight clear SignColumn
- " highlight clear CursorLineNr
- " highlight clear SignColumn
- " highlight clear LineNr
 ]])
 

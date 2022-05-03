@@ -1,20 +1,12 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed =  {
-		"c",
-		"lua",
-		"cpp",
-		"html",
-		"bash",
-		"rust",
-	},  -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+		--ensure_installed = "maintained",
+		highlight = {
+			enable = true,              -- false will disable the whole extension
+		},
 
-	highlight = {
-		enable = true,              -- false will disable the whole extension
-	},
-
-	indent = {
-		enable = true,
-	},
+		indent = {
+			enable = true,
+		},
 }
 
 vim.opt.foldmethod = "expr"
