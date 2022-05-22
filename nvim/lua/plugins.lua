@@ -50,7 +50,18 @@ return require('packer').startup(function()
 
 	use 'junegunn/fzf.vim'
 
+	--Colors
 	use 'bluz71/vim-moonfly-colors'
+
+	use 'folke/tokyonight.nvim'
+
+	use "savq/melange"
+
+	use 'marko-cerovac/material.nvim'
+
+	use 'chriskempson/base16-vim'
+
+
 
 	use {'kyazdani42/nvim-web-devicons'}
 
@@ -61,8 +72,6 @@ return require('packer').startup(function()
 	use 'preservim/nerdcommenter'
 
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
-	use 'marko-cerovac/material.nvim'
 
 	use {
 		'hoob3rt/lualine.nvim',
@@ -85,5 +94,4 @@ return require('packer').startup(function()
 
 	use 'nvim-lua/lsp-status.nvim'
 
-	use 'chriskempson/base16-vim'
 end)

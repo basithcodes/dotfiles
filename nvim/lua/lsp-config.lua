@@ -228,7 +228,7 @@ require("clangd_extensions").setup {
 require'lspconfig'.pyright.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
-	root_dir = require'lspconfig'.util.root_pattern{'*.launch', '.git'},
+	root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj", ".git"},
 }
 local opts = {noremap = true, silent = true}
 vim.api.nvim_buf_set_keymap(0, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next({severity_limit = "Warning", popup_opts = {border = "single"}})<CR>', opts)

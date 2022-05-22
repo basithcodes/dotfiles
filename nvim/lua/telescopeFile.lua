@@ -54,7 +54,7 @@ require("telescope").setup{
 }
 
 require("telescope").load_extension("fzf")
-require("telescope").load_extension "file_browser"
+require("telescope").load_extension("file_browser")
 require("telescope").load_extension('harpoon')
 
 -- Project and file navigation functions
@@ -85,7 +85,7 @@ M.curr_dir_grepping = function()
 end
 
 -- File browser for python programming directory
-M.python_prog = function ()
+M.python_prog = function()
 	require("telescope.builtin").find_files({
 		prompt_title = "< All python programming files >",
 		cwd = "~/Coding/python_programming/",
@@ -94,6 +94,46 @@ M.python_prog = function ()
 			preview_width = 0.65,
 		},
 		file_ignore_patterns = {
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Find files in stm32 specific projects(stm1 shortcut)
+M.search_stm32_proj = function ()
+	require("telescope").extensions.file_browser.file_browser({
+		prompt_title = "< STM32 project files >",
+		cwd = "~/Coding/microcontroller_programming/stm32/stm32f407vgt6/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+-- Find files in stm32 IDE workspace(stm2 shortcut)
+M.search_stm32_ide_proj = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "< Stm32 IDE Project Files >",
+		cwd = "~/STM32CubeIDE/workspace_1.9.0/",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+			"%.jpg",
+			"%.zip",
+			"%.o",
+			"%.out",
+			"%.d"
 		},
 		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
 	})
@@ -139,16 +179,19 @@ M.project_workspace = function()
 		--print(char_cut)
 		--TODO
 		--@ get actual project name
-
 		require("telescope.builtin").find_files({
 			prompt_title = "< " .. char_cut .. " >",
 			file_ignore_patterns = {
-				-- "^docs/",
-				-- "%.jpg",
-				-- "%.zip",
-				-- "%.o",
-				-- "%.out",
-				-- "%.d"
+				 "^docs/",
+				 "%.jpg",
+				 "%.zip",
+				 "%.o",
+				 "%.out",
+				 "%.d",
+				 "^Docs/",
+				 "^CMSIS/docs",
+				 "^CMSIS/%.lib",
+				 "^CMSIS/Lib/"
 			},
 			cwd = char_cut,
 			grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new

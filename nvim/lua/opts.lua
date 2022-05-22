@@ -9,12 +9,12 @@ vim.wo.colorcolumn = '100'
 -- vim.bo.expandtab = true
 
 -- Vim global options
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.clipboard = 'unnamedplus'
 vim.o.mouse = 'a'
 vim.o.scrolloff = 8
-vim.o.background = 'dark'
+--vim.o.background = 'dark'
 vim.o.hls = false
 vim.o.hidden = true
 vim.o.smarttab = true
@@ -28,7 +28,7 @@ vim.o.filetype = 'on'
 vim.g.nvim_system_wide = true
 vim.g.moonflyCursorColor = 1
 vim.g.moonflyNormalFloat = 1
---vim.opt.formatoptions:append('**')
+-- vim.opt.formatoptions:append('**')
 vim.opt.lazyredraw = true
 --vim.g.completeopt = "menu,menuone,noselect"
 
@@ -46,11 +46,25 @@ vim.api.nvim_command([[
 autocmd BufEnter * silent! lcd %:p:h
 ]])
 
-
 --vim.g.material_style = "deep ocean"
+
+--colorscheme settings
+--vim.g.tokyonight_style = "day"
+--vim.g.tokyonight_style = "night"
+
+require("lualine").setup {
+	options = {
+		--lualine configs
+		theme = 'tokyonight'
+		--lualine configs
+	}
+}
+
 vim.cmd([[
-colorscheme moonfly
-" colorscheme morning
-" colorscheme material
+ colorscheme moonfly
+" colorscheme melange
+" colorscheme tokyonight
+" colorscheme base16-bright
+" colorscheme base16-atelier-forest-light
 ]])
 

@@ -9,6 +9,12 @@ keymap("n", "<C-f>", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]],
 -- File Browser
 keymap("n", "<leader>dir", [[<Cmd>lua require("telescopeFile").file_browser()<CR>]], { noremap = true })
 
+-- Stm32 my workspace
+keymap("n", "<leader>stm1", [[<Cmd>lua require("telescopeFile").search_stm32_proj()<CR>]], { noremap = true })
+
+-- Stm32 IDE workspace
+keymap("n", "<leader>stm2", [[<Cmd>lua require("telescopeFile").search_stm32_ide_proj()<CR>]], { noremap = true })
+
 -- Grepping
 -- Live grep in directory
 keymap("n", "<leader>g", [[<Cmd>lua require("telescopeFile").curr_dir_grepping()<CR>]], opts)
