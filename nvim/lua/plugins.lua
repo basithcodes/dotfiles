@@ -36,6 +36,23 @@ return require('packer').startup(function()
 		'saadparwaiz1/cmp_luasnip'
 	}
 
+	--call hierarchy navigation
+  use {
+		'ldelossa/litee.nvim',
+		'ldelossa/litee-calltree.nvim',
+		'ldelossa/litee-symboltree.nvim',
+		'ldelossa/litee-filetree.nvim',
+		'ldelossa/litee-bookmarks.nvim',
+	}
+
+  use {
+		"mfussenegger/nvim-dap",
+		"leoluz/nvim-dap-go",
+		"rcarriga/nvim-dap-ui",
+		"theHamsta/nvim-dap-virtual-text",
+		"nvim-telescope/telescope-dap.nvim"
+	}
+
 	use {"p00f/clangd_extensions.nvim"}
 
 	use {"ThePrimeagen/harpoon"}
@@ -82,11 +99,11 @@ return require('packer').startup(function()
 
 	use 'nvim-treesitter/playground'
 
-	--use 'kabouzeid/nvim-lspinstall'
+	use 'kabouzeid/nvim-lspinstall'
 
 	use 'neovim/nvim-lsp'
 
-	-- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+	 --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
 	use 'L3MON4D3/LuaSnip'
 

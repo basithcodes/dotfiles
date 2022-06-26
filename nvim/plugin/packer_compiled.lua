@@ -119,6 +119,31 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["litee-bookmarks.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-bookmarks.nvim",
+    url = "https://github.com/ldelossa/litee-bookmarks.nvim"
+  },
+  ["litee-calltree.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-calltree.nvim",
+    url = "https://github.com/ldelossa/litee-calltree.nvim"
+  },
+  ["litee-filetree.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-filetree.nvim",
+    url = "https://github.com/ldelossa/litee-filetree.nvim"
+  },
+  ["litee-symboltree.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-symboltree.nvim",
+    url = "https://github.com/ldelossa/litee-symboltree.nvim"
+  },
+  ["litee.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee.nvim",
+    url = "https://github.com/ldelossa/litee.nvim"
+  },
   ["lsp-status.nvim"] = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
@@ -159,6 +184,26 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
   ["nvim-lint"] = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-lint",
@@ -173,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -208,6 +258,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
