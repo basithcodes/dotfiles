@@ -115,7 +115,8 @@ require("clangd_extensions").setup {
 			"--header-insertion=iwyu",
 		},
 		filetypes = { "c", "cpp", "objc", "objcpp" },
-		root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj", },
+		-- put make files temporarily remove it if its getting in the way
+		root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj", "makefile"}, 
 		single_file_support = true,
 		--}
 	},

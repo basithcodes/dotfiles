@@ -12,4 +12,3 @@ require('neovim-autopairs')
 require('nvim-tree-lua')
 require('debugging')
 require('litee-plugs')
-

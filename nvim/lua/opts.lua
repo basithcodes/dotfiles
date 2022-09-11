@@ -14,6 +14,7 @@ vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.clipboard = 'unnamedplus'
 vim.o.mouse = 'a'
 vim.o.scrolloff = 8
+vim.g.syntax_on = 'on'
 --vim.o.background = 'dark'
 vim.o.hls = false
 vim.o.hidden = true
