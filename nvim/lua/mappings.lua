@@ -1,6 +1,14 @@
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
 
+--Modes (for reference only)
+--   normal_mode = "n"
+--   insert_mode = "i"
+--   visual_mode = "v"
+--   visual_block_mode = "x"
+--   term_mode = "t"
+--   command_mode = "c"
+
 -- File/Directory navigation
 -- Find files in current directory
 keymap("n", "<leader>f", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
@@ -58,8 +66,13 @@ keymap("n", "<leader>ht", [[<Cmd>Telescope harpoon marks<CR>]], opts)
 -- setting compiler
 --keymap("n", "<F5>", [[<Cmd>python3 %<CR>]], opts)
 
--- Compiler settings
+-- Resize with arrows
+keymap("n", "<C-Up>", "<Cmd>resize -2<CR>", opts)
+keymap("n", "<C-down>", "<Cmd>resize +2<CR>", opts)
+keymap("n", "<C-Left>", "<Cmd>vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", "<Cmd>vertical resize +2<CR>", opts)
 
+-- Compiler settings
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 --Window Specific Options
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.signcolumn = 'yes'
@@ -9,30 +10,32 @@ vim.wo.colorcolumn = '100'
 -- vim.bo.expandtab = true
 
 -- Vim global options
-vim.opt.termguicolors = true
-vim.o.shortmess = vim.o.shortmess .. 'c'
-vim.o.clipboard = 'unnamedplus'
-vim.o.mouse = 'a'
-vim.o.scrolloff = 8
-vim.g.syntax_on = 'on'
---vim.o.background = 'dark'
-vim.o.hls = false
-vim.o.hidden = true
-vim.o.smarttab = true
-vim.o.ignorecase = true
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
-vim.o.tabstop = 2
-vim.o.autoindent = true
-vim.o.autochdir = true
-vim.o.filetype = 'on'
-vim.g.nvim_system_wide = true
-vim.g.moonflyCursorColor = 1
-vim.g.moonflyNormalFloat = 1
--- vim.opt.formatoptions:append('**')
-vim.opt.lazyredraw = true
---vim.g.completeopt = "menu,menuone,noselect"
+local options = {
+termguicolors = true,
+shortmess = vim.o.shortmess .. 'c',
+clipboard = 'unnamedplus',
+mouse = 'a',
+scrolloff = 8,
+--background = 'dark',
+hls = false,
+hidden = true,
+smarttab = true,
+ignorecase = true,
+shiftwidth = 2,
+softtabstop = 2,
+tabstop = 2,
+autoindent = true,
+autochdir = true,
+filetype = 'on',
+--moonflyCursorColor = 1,
+--moonflyNormalFloat = 1,
+--formatoptions:append('**'),
+lazyredraw = true,
+}
 
+for option, value in pairs(options) do
+	vim.opt[option] = value
+end
 
 vim.cmd([[
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,nbsp:␣
@@ -40,6 +43,8 @@ set showbreak=↪\
 "set list listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set path+=**
 ]])
+
+vim.cmd "set whichwrap+=<,>[,],h,l" -- wrap to next line when there is nothing at the end
 
 -- Commands
 vim.api.nvim_command([[
@@ -51,7 +56,7 @@ autocmd BufEnter * silent! lcd %:p:h
 
 --colorscheme settings
 --vim.g.tokyonight_style = "day"
---vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = "night"
 
 require("lualine").setup {
 	options = {
@@ -62,9 +67,9 @@ require("lualine").setup {
 }
 
 vim.cmd([[
- colorscheme moonfly
-" colorscheme melange
-" colorscheme tokyonight
+"colorscheme moonfly
+"colorscheme melange
+colorscheme tokyonight
 " colorscheme base16-bright
 " colorscheme base16-atelier-forest-light
 ]])

@@ -50,7 +50,8 @@ return require('packer').startup(function()
 		"leoluz/nvim-dap-go",
 		"rcarriga/nvim-dap-ui",
 		"theHamsta/nvim-dap-virtual-text",
-		"nvim-telescope/telescope-dap.nvim"
+		"nvim-telescope/telescope-dap.nvim",
+		"Pocco81/DAPInstall.nvim"
 	}
 
 	use {"p00f/clangd_extensions.nvim"}
@@ -59,7 +60,7 @@ return require('packer').startup(function()
 
 	use { "nvim-telescope/telescope-file-browser.nvim" }
 
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
 
 	use {'kyazdani42/nvim-tree.lua'}
 
