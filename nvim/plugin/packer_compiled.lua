@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-calltree.nvim",
     url = "https://github.com/ldelossa/litee-calltree.nvim"
   },
-  ["litee-filetree.nvim"] = {
-    loaded = true,
-    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-filetree.nvim",
-    url = "https://github.com/ldelossa/litee-filetree.nvim"
-  },
   ["litee-symboltree.nvim"] = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/litee-symboltree.nvim",

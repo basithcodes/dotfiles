@@ -1,5 +1,6 @@
 require('plugins')
 require('telescopeFile')
+require('nvim-treesitter-setup')
 require('globals')
 require('lsp-config')
 require('linters')

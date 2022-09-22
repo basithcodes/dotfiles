@@ -1,5 +1,7 @@
 require('lint').linters_by_ft = {
-  markdown = {'vale',},
+  markdown = {'vale'},
+	text = {'vale'},
 	c = {'clangtidy'},
-	--python = {'pylint'}
+	python = {'pylint'},
+	lua = {'sumneko_lua'}
 }

@@ -36,16 +36,16 @@ return require('packer').startup(function()
 		'saadparwaiz1/cmp_luasnip'
 	}
 
-	--call hierarchy navigation
-  use {
+	--call hierarchy, navigation, bookmarks and filetree
+	use {
 		'ldelossa/litee.nvim',
 		'ldelossa/litee-calltree.nvim',
 		'ldelossa/litee-symboltree.nvim',
-		'ldelossa/litee-filetree.nvim',
+		--'ldelossa/litee-filetree.nvim',
 		'ldelossa/litee-bookmarks.nvim',
 	}
 
-  use {
+	use {
 		"mfussenegger/nvim-dap",
 		"leoluz/nvim-dap-go",
 		"rcarriga/nvim-dap-ui",
@@ -60,13 +60,16 @@ return require('packer').startup(function()
 
 	use { "nvim-telescope/telescope-file-browser.nvim" }
 
-	use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ':TSUpdate',
+	}
 
 	use {'kyazdani42/nvim-tree.lua'}
 
 	use { 'sindrets/diffview.nvim' }
 
-	use 'junegunn/fzf.vim'
+	use { 'junegunn/fzf.vim' }
 
 	--Colors
 	use 'bluz71/vim-moonfly-colors'
@@ -78,7 +81,6 @@ return require('packer').startup(function()
 	use 'marko-cerovac/material.nvim'
 
 	use 'chriskempson/base16-vim'
-
 
 
 	use {'kyazdani42/nvim-web-devicons'}
@@ -104,7 +106,7 @@ return require('packer').startup(function()
 
 	use 'neovim/nvim-lsp'
 
-	 --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+	--use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
 	use 'L3MON4D3/LuaSnip'
 

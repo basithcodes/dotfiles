@@ -12,7 +12,10 @@ local keymap = vim.api.nvim_set_keymap
 -- File/Directory navigation
 -- Find files in current directory
 keymap("n", "<leader>f", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
-keymap("n", "<C-f>", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts) -- Find C files in ~/Coding/Cprogramming directory vim.api.nvim_set_keymap('n', '<leader><leader>cp', [[<Cmd>lua require('telescopeFile').search_c_directory()<CR>]], opts)
+keymap("n", "<C-f>", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
+
+-- Find C files in ~/Coding/Cprogramming directory 
+vim.api.nvim_set_keymap('n', '<leader><leader>cp', [[<Cmd>lua require('telescopeFile').search_c_directory()<CR>]], opts)
 
 -- File Browser
 keymap("n", "<leader>dir", [[<Cmd>lua require("telescopeFile").file_browser()<CR>]], { noremap = true })
@@ -35,6 +38,9 @@ keymap("n", "<leader>lua", [[<Cmd>lua require("telescopeFile").lua_conf()<CR>]],
 
 -- File browser for python programming directory
 keymap("n", "<leader>py", [[<Cmd>lua require("telescopeFile").python_prog()<CR>]], opts)
+
+-- Make file practice
+keymap("n", "<leader>make", [[<Cmd>lua require("telescopeFile").make_file_practice()<CR>]], opts)
 
 -- File browser for c programming directory
 keymap("n", "<leader><leader>cp", [[<Cmd>lua require("telescopeFile").search_c_directory()<CR>]], opts)
@@ -79,46 +85,46 @@ keymap("n", "<C-Right>", "<Cmd>vertical resize +2<CR>", opts)
 ----------------------------------------------------------------------------------------------------
 
 -- litee.lib mappings
---vim.api.nvim_set_keymap("n", "<C-t>",   ":LTPanel<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-t>t",  ":LTPanel<cr>", opts)
---vim.api.nvim_set_keymap("n", "<leader>tm", ":LTTerm<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-t>h",  ":LTClearJumpHL<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-t>",   ":LTPanel<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-t>t",  ":LTPanel<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>tm", ":LTTerm<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-t>h",  ":LTClearJumpHL<cr>", opts)
 
 ------ calltree specific commands
---vim.api.nvim_set_keymap("n", "<C-h>o",     ":LTOpenToCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>oo",    ":LTPopOutCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>n",     ":LTNextCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>p",     ":LTPrevCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>e",     ":LTExpandCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>c",     ":LTCollapseCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>C",     ":LTCollapseAllCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>f",     ":LTFocusCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>S",     ":LTSwitchCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>j",     ":LTJumpCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>s",     ":LTJumpCalltreeSplit<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>v",     ":LTJumpCalltreeVSplit<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>t",     ":LTJumpCalltreeTab<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>i",     ":LTHoverCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>h",     ":LTHoverCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>d",     ":LTHideCalltree<cr>", opts)
---vim.api.nvim_set_keymap("n", "<C-h>x",     ":LTCloseCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>o",     ":LTOpenToCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>oo",    ":LTPopOutCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>n",     ":LTNextCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>p",     ":LTPrevCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>e",     ":LTExpandCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>c",     ":LTCollapseCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>C",     ":LTCollapseAllCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>f",     ":LTFocusCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>S",     ":LTSwitchCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>j",     ":LTJumpCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>s",     ":LTJumpCalltreeSplit<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>v",     ":LTJumpCalltreeVSplit<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>t",     ":LTJumpCalltreeTab<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>i",     ":LTHoverCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>h",     ":LTHoverCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>d",     ":LTHideCalltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-h>x",     ":LTCloseCalltree<cr>", opts)
 
 ------ symboltree specific commands
-----vim.api.nvim_set_keymap("n", "<C-s>o", ":LTOpenToSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>oo", ":LTPopOutSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>n", ":LTNextSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>p", ":LTPrevSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>e", ":LTExpandSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>c", ":LTCollapseSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>C", ":LTCollapseAllSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>j", ":LTJumpSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>s", ":LTJumpSymboltreeSplit<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>v", ":LTJumpSymboltreeVSplit<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>t", ":LTJumpSymboltreeTab<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>i", ":LTHoverSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>d", ":LTDetailsSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>h", ":LTHideSymboltree<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-s>x", ":LTCloseSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>o", ":LTOpenToSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>oo", ":LTPopOutSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>n", ":LTNextSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>p", ":LTPrevSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>e", ":LTExpandSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>c", ":LTCollapseSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>C", ":LTCollapseAllSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>j", ":LTJumpSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>s", ":LTJumpSymboltreeSplit<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>v", ":LTJumpSymboltreeVSplit<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>t", ":LTJumpSymboltreeTab<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>i", ":LTHoverSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>d", ":LTDetailsSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>h", ":LTHideSymboltree<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-s>x", ":LTCloseSymboltree<cr>", opts)
 
 ------ filetree specific commands
 ------vim.api.nvim_set_keymap("n", "<leader><leader>", ":LTPopOutFiletree<cr>", opts)
@@ -143,13 +149,13 @@ keymap("n", "<C-Right>", "<Cmd>vertical resize +2<CR>", opts)
 ------vim.api.nvim_set_keymap("n", "<C-x>R", ":LTTRenameFiletree<cr>", opts)
 
 ------ bookmarks specific commands
-----vim.api.nvim_set_keymap("n", "<C-b>n", ":LTOpenNotebook<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-b>o", ":LTOpenToNotebook<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-b>oo", ":LTPopOutNotebook<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-b>l", ":LTListNotebooks<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-b>c", ":LTCreateBookmark<cr>", opts)
-----vim.api.nvim_set_keymap("n", "<C-b>h", ":LTHideBookmarks<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>n", ":LTOpenNotebook<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>o", ":LTOpenToNotebook<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>oo", ":LTPopOutNotebook<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>l", ":LTListNotebooks<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>c", ":LTCreateBookmark<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-b>h", ":LTHideBookmarks<cr>", opts)
 
---vim.api.nvim_set_keymap("n", "<C-l>o", "<cmd>lua require('litee.lib.lsp.wrappers').buf_outgoing_calls()<CR>", opts)
---vim.api.nvim_set_keymap("n", "<C-l>i", "<cmd>lua require('litee.lib.lsp.wrappers').buf_incoming_calls()<CR>", opts)
---vim.api.nvim_set_keymap("n", "<C-l>s", "<cmd>lua require('litee.lib.lsp.wrappers').buf_document_symbol()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-l>o", "<cmd>lua require('litee.lib.lsp.wrappers').buf_outgoing_calls()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-l>i", "<cmd>lua require('litee.lib.lsp.wrappers').buf_incoming_calls()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-l>s", "<cmd>lua require('litee.lib.lsp.wrappers').buf_document_symbol()<CR>", opts)

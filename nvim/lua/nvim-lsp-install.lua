@@ -1,9 +1,22 @@
+-- lsp-install
 local function setup_servers()
   require'lspinstall'.setup()
-  local servers = require'lspinstall'.installed_servers()
-  for _, server in pairs(servers) do
-    require'lspconfig'[server].setup{}
-  end
+
+  --local servers = require'lspinstall'.installed_servers()
+  --for _, server in pairs(servers) do
+		--local config = make_config()
+
+		---- language specific config
+		----if server == "lua" then
+			----config.settings = lua_settings
+		----end
+
+		----if server == "clangd" then
+			----config.filetypes = {"c", "cpp"};
+		----end
+
+    --require'lspconfig'[server].setup{config}
+  --end
 end
 
 setup_servers()

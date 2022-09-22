@@ -111,7 +111,7 @@ ins_left {
     return ''
   end,
   color = "LualineMode",
-  left_padding = 0
+  left_padding = 0,
 }
 
 ins_left {
