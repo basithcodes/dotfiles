@@ -33,10 +33,10 @@ return require('packer').startup(function()
 		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-path',
-		'saadparwaiz1/cmp_luasnip'
+		--'saadparwaiz1/cmp_luasnip'
 	}
 
-	--call hierarchy, navigation, bookmarks and filetree
+	----call hierarchy, navigation, bookmarks and filetree
 	use {
 		'ldelossa/litee.nvim',
 		'ldelossa/litee-calltree.nvim',
@@ -62,7 +62,7 @@ return require('packer').startup(function()
 
 	use {
 		"nvim-treesitter/nvim-treesitter",
-		run = ':TSUpdate',
+		--run = ':TSUpdate',
 	}
 
 	use {'kyazdani42/nvim-tree.lua'}
@@ -71,18 +71,16 @@ return require('packer').startup(function()
 
 	use { 'junegunn/fzf.vim' }
 
-	--Colors
-	use 'bluz71/vim-moonfly-colors'
+	----Colors
+	--use 'bluz71/vim-moonfly-colors'
 
 	use 'folke/tokyonight.nvim'
 
-	use "savq/melange"
+	--use "savq/melange"
 
-	use 'marko-cerovac/material.nvim'
+	--use 'marko-cerovac/material.nvim'
 
-	use 'chriskempson/base16-vim'
-
-	use {'kyazdani42/nvim-web-devicons'}
+	--use 'chriskempson/base16-vim'
 
 	use {'vimwiki/vimwiki', branch = 'dev'}
 
@@ -99,7 +97,7 @@ return require('packer').startup(function()
 
 	use 'windwp/nvim-autopairs'
 
-	use 'nvim-treesitter/playground'
+	--use 'nvim-treesitter/playground'
 
 	use 'neovim/nvim-lsp'
 
@@ -109,7 +107,7 @@ return require('packer').startup(function()
 
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters, linters and fixers(maybe)
 
-	--use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+	----use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
 	use 'L3MON4D3/LuaSnip'
 
