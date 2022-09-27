@@ -11,7 +11,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- File/Directory navigation
 -- Find files in current directory
-keymap("n", "<leader>f", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
+--keymap("n", "<leader>f", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
 keymap("n", "<C-f>", [[<Cmd>lua require("telescopeFile").curr_dir_files()<CR>]], opts)
 
 -- Find C files in ~/Coding/Cprogramming directory 

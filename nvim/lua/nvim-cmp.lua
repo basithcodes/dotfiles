@@ -1,4 +1,4 @@
-local luasnip = require 'luasnip'
+local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup({
@@ -10,8 +10,8 @@ cmp.setup({
 		--['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.close(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
-		--behavior = cmp.ConfirmBehavior.Replace,
-		--select = true,
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = true,
 		['<Tab>'] = function(fallback)
 			if cmp.visible() then
 				--vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Tab>', true, true, true), 'n', true)
@@ -35,7 +35,8 @@ cmp.setup({
 			end
 		end,
 	},
-	snippet = { expand = function(args)
+	snippet = {
+		expand = function(args)
 			-- For `luasnip` user.
 			require('luasnip').lsp_expand(args.body)
 		end,
@@ -46,6 +47,11 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+	},
+
+	window = {
+		completion  = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 
 	completion = {

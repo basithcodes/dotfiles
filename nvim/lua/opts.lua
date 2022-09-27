@@ -45,7 +45,7 @@ local options = {
 	lazyredraw = true,
 }
 
---local global_options = {
+--local moonfly_global_options = {
 	--moonflyCursorColor = true,
 	--moonflyNormalFloat = true,
 	--moonflyTerminalColors = true,

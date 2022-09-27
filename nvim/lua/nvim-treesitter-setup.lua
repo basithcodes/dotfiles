@@ -12,7 +12,7 @@ configs.setup {
 	matchup = {
 		enable = true, -- mandatory, false will disable the whole extension
 		--disable_virtual_text = true,
-		disable = {"html"}, -- optional, list of language that will be disabled
+		--disable = {"html"}, -- optional, list of language that will be disabled
 		-- include_match_words = false
 	},
 

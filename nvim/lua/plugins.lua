@@ -24,13 +24,13 @@ return require('packer').startup(function()
 		},
 	}
 
-	use 'mfussenegger/nvim-lint'
+	--use 'mfussenegger/nvim-lint'
 
 	use {
 
 		'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
-		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-path',
 		'saadparwaiz1/cmp_luasnip'
@@ -41,7 +41,7 @@ return require('packer').startup(function()
 		'ldelossa/litee.nvim',
 		'ldelossa/litee-calltree.nvim',
 		'ldelossa/litee-symboltree.nvim',
-		--'ldelossa/litee-filetree.nvim',
+		'ldelossa/litee-filetree.nvim',
 		'ldelossa/litee-bookmarks.nvim',
 	}
 
@@ -82,7 +82,6 @@ return require('packer').startup(function()
 
 	use 'chriskempson/base16-vim'
 
-
 	use {'kyazdani42/nvim-web-devicons'}
 
 	use {'vimwiki/vimwiki', branch = 'dev'}
@@ -102,9 +101,13 @@ return require('packer').startup(function()
 
 	use 'nvim-treesitter/playground'
 
-	use 'kabouzeid/nvim-lspinstall'
-
 	use 'neovim/nvim-lsp'
+
+	use 'williamboman/mason.nvim'
+
+	use "williamboman/mason-lspconfig.nvim"
+
+	use "jose-elias-alvarez/null-ls.nvim" -- for formatters, linters and fixers(maybe)
 
 	--use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
