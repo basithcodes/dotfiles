@@ -24,8 +24,6 @@ return require('packer').startup(function()
 		},
 	}
 
-	--use 'mfussenegger/nvim-lint'
-
 	use {
 
 		'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
@@ -33,7 +31,7 @@ return require('packer').startup(function()
 		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-path',
-		--'saadparwaiz1/cmp_luasnip'
+		'saadparwaiz1/cmp_luasnip'
 	}
 
 	----call hierarchy, navigation, bookmarks and filetree
@@ -54,7 +52,7 @@ return require('packer').startup(function()
 		"Pocco81/DAPInstall.nvim"
 	}
 
-	use {"p00f/clangd_extensions.nvim"}
+	--use {"p00f/clangd_extensions.nvim"} -- This extension is causing massive lsp problems
 
 	use {"ThePrimeagen/harpoon"}
 
@@ -72,15 +70,15 @@ return require('packer').startup(function()
 	use { 'junegunn/fzf.vim' }
 
 	----Colors
-	--use 'bluz71/vim-moonfly-colors'
+	use 'bluz71/vim-moonfly-colors'
 
 	use 'folke/tokyonight.nvim'
 
-	--use "savq/melange"
+	use "savq/melange"
 
-	--use 'marko-cerovac/material.nvim'
+	use 'marko-cerovac/material.nvim'
 
-	--use 'chriskempson/base16-vim'
+	use 'chriskempson/base16-vim'
 
 	use {'vimwiki/vimwiki', branch = 'dev'}
 
@@ -90,14 +88,13 @@ return require('packer').startup(function()
 
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-	use {
-		'hoob3rt/lualine.nvim',
-		requires = {'kyazdani42/nvim-web-devicons', opt = true}
-	}
+	use	'hoob3rt/lualine.nvim'
+
+	use {'kyazdani42/nvim-web-devicons', opt = true}
 
 	use 'windwp/nvim-autopairs'
 
-	--use 'nvim-treesitter/playground'
+	use 'nvim-treesitter/playground'
 
 	use 'neovim/nvim-lsp'
 

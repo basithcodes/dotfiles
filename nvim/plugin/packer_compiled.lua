@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["base16-vim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/base16-vim",
+    url = "https://github.com/chriskempson/base16-vim"
+  },
   ["clangd_extensions.nvim"] = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/clangd_extensions.nvim",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["diffview.nvim"] = {
     loaded = true,
@@ -164,6 +174,16 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  melange = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/melange",
+    url = "https://github.com/savq/melange"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nerdcommenter",
@@ -224,6 +244,11 @@ _G.packer_plugins = {
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
@@ -234,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -269,6 +299,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/home/abdulb/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

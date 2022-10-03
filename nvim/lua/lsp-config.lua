@@ -1,5 +1,6 @@
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
+
 local on_attach = function(_, bufnr)
 local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
@@ -40,163 +41,89 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 -- Sumneko Lua Configs
 -- Set the path to the sumneko installation
---local system_name = "Linux" -- (Linux, macOS, or Windows)
-local sumneko_root_path = '/usr'
---local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
-local sumneko_binary = sumneko_root_path .."/bin/" .. "lua-language-server"
+local sumneko_root_path = '/usr/bin/'
+local sumneko_binary = "/usr/bin/lua-language-server"
 
 require'lspconfig'.sumneko_lua.setup {
 	cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
 	-- An example of settings for an LSP server.
 	-- For more options, see nvim-lspconfig
-	settings = {
-		Lua = {
-			completion = {
-				keywordSnippet = "Enable",
+	settings = { --Lua
+	Lua = {
+		completion = {
+			keywordSnippet = "Enable",
+		},
+		diagnostics = {
+			globals = {"vim", "use"},
+			disable = {"lowercase-global"}
+		},
+		runtime = {
+			version = "LuaJIT",
+			path = {
+				vim.split(package.path, ";"),
+				'?.lua',
+				'?/init.lua',
 			},
-			diagnostics = {
-				globals = {"vim", "use"},
-				disable = {"lowercase-global"}
+		},
+		workspace = {
+			library = {
+				[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+				[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+				[vim.fn.expand("$VIMRUNTIME/lua/vim/treesitter")] = true,
+				[vim.fn.expand("/usr/share/luajit-2.1.0-beta3/jit")] = true,
 			},
-			runtime = {
-				version = "LuaJIT",
-				path = {
-					vim.split(package.path, ";"),
-					'?.lua',
-					'?/init.lua',
-				},
-			},
-			workspace = {
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-					[vim.fn.expand("$VIMRUNTIME/lua/vim/treesitter")] = true,
-					[vim.fn.expand("/usr/share/luajit-2.1.0-beta3/jit")] = true,
-				},
-				checkThirdParty = false,
-			},
-		}, -- Lua end
-	}, -- settings end
-	root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj",},
+			checkThirdParty = false,
+		},
+	}, -- Lua end
+}, -- settings end
+root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj",},
 }
 
-
--- C/CPP Configs
-require("clangd_extensions").setup {
-	server = {
-		-- options to pass to nvim-lspconfig
-		-- i.e. the arguments to require("lspconfig").clangd.setup({})
-		handlers = {
-			["textDocument/publishDiagnostics"] = vim.lsp.with(
-				vim.lsp.diagnostic.on_publish_diagnostics, {
-					underline = true,
-					update_in_insert = false,
-					virtual_text = {
-						spacing = 3,
-					},
-					signs = true,
-					float = {
-						source = "always",
-					}
-				}
-			),
-			["textDocument/hover"] = vim.lsp.with(
-				vim.lsp.handlers.hover,{
-					border = 'single'
-				}
-			),
-			["textDocument/signatureHelp"] = vim.lsp.with(
-				vim.lsp.handlers.signatureHelp, {
-					border = 'single'
-				}
-			)
-		},
-		on_attach = on_attach,
-		capabilities = capabilities,
-		cmd = {
-			"clangd",
-			"--background-index",
-			--"--suggest-missing-includes",
-			"--clang-tidy",
-			--"--header-insertion=iwyu",
-		},
-		filetypes = { "c", "cpp",},
-		-- put make files temporarily remove it if its getting in the way
-		root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj",},
-		single_file_support = true,
+-- Clangd Setup
+require'lspconfig'.clangd.setup {
+	handlers = {
+		["textDocument/publishDiagnostics"] = vim.lsp.with(
+		vim.lsp.diagnostic.on_publish_diagnostics, {
+			underline = true,
+			update_in_insert = false,
+			virtual_text = true,
+			signs = true,
+		}
+		),
+		["textDocument/hover"] = vim.lsp.with(
+		vim.lsp.handlers.hover,{
+			border = 'single'
+		}
+		),
+		["textDocument/signatureHelp"] = vim.lsp.with(
+		vim.lsp.handlers.signatureHelp, {
+			border = 'single'
+		}
+		)
 	},
-	extensions = {
-		-- defaults:
-		-- Automatically set inlay hints (type hints)
-		autoSetHints = true,
-		-- Whether to show hover actions inside the hover window
-		-- This overrides the default hover handler
-		hover_with_actions = true,
-		-- These apply to the default ClangdSetInlayHints command
-		inlay_hints = {
-			-- Only show inlay hints for the current line
-			only_current_line = false,
-			-- Event which triggers a refersh of the inlay hints.
-			-- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
-			-- not that this may cause  higher CPU usage.
-			-- This option is only respected when only_current_line and
-			-- autoSetHints both are true.
-			only_current_line_autocmd = "CursorHold",
-			-- whether to show parameter hints with the inlay hints or not
-			show_parameter_hints = true,
-			-- prefix for parameter hints
-			parameter_hints_prefix = "<- ",
-			-- prefix for all the other hints (type, chaining)
-			other_hints_prefix = "=> ",
-			-- whether to align to the length of the longest line in the file
-			max_len_align = false,
-			-- padding from the left if max_len_align is true
-			max_len_align_padding = 1,
-			-- whether to align to the extreme right or not
-			right_align = false,
-			-- padding from the right if right_align is true
-			right_align_padding = 7,
-			-- The color of the hints
-			highlight = "Comment",
-			-- The highlight group priority for extmark
-			priority = 100,
-		},
-		ast = {
-			role_icons = {
-				type = "",
-				declaration = "",
-				expression = "",
-				specifier = "",
-				statement = "",
-				["template argument"] = "",
-			},
-
-			kind_icons = {
-				Compound = "",
-				Recovery = "",
-				TranslationUnit = "",
-				PackExpansion = "",
-				TemplateTypeParm = "",
-				TemplateTemplateParm = "",
-				TemplateParamObject = "",
-			},
-
-			highlights = {
-				detail = "Comment",
-			},
-			memory_usage = {
-				border = "none",
-			},
-			symbol_info = {
-				border = "none",
-			},
-		},
-	}
-}
-
--- Pyright Setup
-require'lspconfig'.pyright.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
-	root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj",},
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--clang-tidy",
+		"--header-insertion=iwyu",
+		"--print-options",
+		"--pch-storage=memory",
+		"--header-insertion-decorators",
+		"--all-scopes-completion",
+		"--completion-style=detailed",
+		"-j=4",
+		"--log=verbose",
+	},
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	single_file_support = true,
+	root_dir = require'lspconfig'.util.root_pattern{'*.launch', '*.myproj'}
 }
+
+--Pyright Setup
+--require'lspconfig'.pyright.setup {
+	--on_attach = on_attach,
+	--capabilities = capabilities,
+	--root_dir = require'lspconfig'.util.root_pattern{"*.launch", "*.myproj",},
+--}

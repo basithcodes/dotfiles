@@ -24,9 +24,9 @@ configs.setup {
 		 --additional_vim_regex_highlight = true,
 	},
 
-	autopairs = {
-		enable = true,
-	},
+	--autopairs = {
+		--enable = true,
+	--},
 
 	indent = {
 		enable = true,
