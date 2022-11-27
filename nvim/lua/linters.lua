@@ -1,7 +1,0 @@
---require('lint').linters_by_ft = {
-	--markdown = {'vale'},
-	--text = {'vale'},
-	--c = {'clangtidy'},
-	--python = {'pylint'}, -- flake8, black
-	--lua = {'sumneko_lua'},
---}

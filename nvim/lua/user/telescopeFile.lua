@@ -114,6 +114,22 @@ M.make_file_practice = function()
 	})
 end
 
+-- Make file browser (im practicing makefiles so I created this)
+M.pyqt_proj = function()
+	require("telescope.builtin").find_files({
+		prompt_title = "<pyqt project>",
+		cwd = "~/Coding/python_programming/pyqt",
+		width = 0.25,
+		layout_config = {
+			preview_width = 0.65,
+		},
+		file_ignore_patterns = {
+		},
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+	})
+end
+
+
 -- Find files in stm32 specific projects(stm1 shortcut)
 M.search_stm32_proj = function ()
 	require("telescope").extensions.file_browser.file_browser({
