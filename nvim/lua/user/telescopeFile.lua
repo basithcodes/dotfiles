@@ -114,7 +114,7 @@ M.make_file_practice = function()
 	})
 end
 
--- Make file browser (im practicing makefiles so I created this)
+-- pyqt file browser (im practicing makefiles so I created this)
 M.pyqt_proj = function()
 	require("telescope.builtin").find_files({
 		prompt_title = "<pyqt project>",
@@ -201,13 +201,13 @@ end
 -- Project Navigation
 M.project_workspace = function()
 	local char_cut
-	local query = {".git"}
+	local query = {"*.myproj", ".git"}
 	local total_length
 	local workspace = vim.inspect(vim.lsp.buf.list_workspace_folders())
 	if workspace ~= '{}' or workspace ~= nil then
 		total_length = string.len(workspace)
 		char_cut = string.sub(workspace,4,total_length-3)
-		--print(char_cut)
+		print(char_cut)
 		--TODO
 		--@ get actual project name
 		require("telescope.builtin").find_files({
@@ -227,9 +227,6 @@ M.project_workspace = function()
 			cwd = char_cut,
 			grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new
 		})
-	else
-		char_cut = string.len(workspace)
-		print("Not a project workspace" .. "value = " .. char_cut)
 	end
 end
 

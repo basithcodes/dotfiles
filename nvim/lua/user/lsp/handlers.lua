@@ -52,7 +52,7 @@ M.setup = function()
 	})
 end
 
-local function lsp_keymaps(bufnr)
+local function lsp_keymaps()
 	local opts = { noremap = true, silent = true }
   -- local bufopts = { noremap=true, silent=true, buffer=bufnr }
 	local keymap = vim.keymap.set
@@ -104,7 +104,7 @@ local function lsp_keymaps(bufnr)
 	keymap("n", '<leader>hide', vim.diagnostic.hide, opts)
 end
 
-M.on_attach = function(client, bufnr)
+M.on_attach = function(client)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
@@ -113,7 +113,7 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-	lsp_keymaps(bufnr)
+	lsp_keymaps()
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
 		return
